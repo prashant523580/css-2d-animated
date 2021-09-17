@@ -1,0 +1,99 @@
+<html>
+<head>
+<style>
+	:root{
+		--blue: #234E70;
+		--yellow: #fbf8be;
+		--orange:#f4a896;
+		--green :  #358597;
+	}
+	body{
+		font-family: "Open Sans", sansrif;
+	}
+.banner{
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-53.5%,-50%);
+	max-width: 900px;
+	margin: auto auto;
+	height: 60vh;
+	background-color: var(--orange);
+	overflow: hidden;
+	border: 20px ridge var(--green);
+	border-radius: .4rem;
+	transition: all 3s ease;
+	cursor: pointer;
+}
+.banner .left,
+.banner .right
+{
+	transition: all 2s ease;
+	position: absolute;
+	width: 50%;
+	background-color: var(--blue);
+	height: 100%;
+	z-index: 4;
+}
+.banner .left{
+	left: 0;
+	transform: ;
+}
+.banner .right{
+	right: 0;
+	transform:;
+}
+.center{
+	transition: all .3s ease;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%) ;
+	background-color: var(--blue);
+	width: 90%;
+	height: 50%;
+	border-radius: .4rem;
+	z-index: 3;
+	box-shadow: 0 0px 5px 10px rgba(0,0,0,0.5);
+	text-align: center;
+	color: var(--yellow);
+	border: 10px groove var(--yellow);
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 6vmin;
+	text-transform: capitalize;
+}
+.center:hover{
+	box-shadow: 0 10px 5px 10px rgba(0,0,0,0.5);
+}
+.banner:hover .left{
+	transform:  skewx(30deg) translatex(-100%);
+}
+.banner:hover .right{
+	transform: skewx(-30deg)translatex(100%) ;
+}
+.left h1, .right h1{
+	position: absolute;
+	top: 75%;
+	font-size: 5vmin;
+	color: white;
+}
+.left h1{
+	right: 0;
+}
+.right h1{
+	left: 0;
+}
+</style>
+</head>
+<body>
+	<div class="banner">
+		<div class="left"> <h1>Kamla medi </h1></div>
+		<div class="right"> <h1>cine distributor</h1> </div>
+		<div class="center"> 
+		 Kamla medicine Distributor </div>
+	</div>
+</body>
+</html>
